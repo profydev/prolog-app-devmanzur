@@ -150,6 +150,12 @@ const CollapseMenuItem = styled(MenuItemButton)`
   @media (min-width: ${breakpoint("desktop")}) {
     display: flex;
   }
+
+  img {
+    transform: ${({ isCollapsed }) =>
+      isCollapsed ? "rotate(180deg)" : "rotate(0deg)"};
+    transition: transform 300ms;
+  }
 `;
 
 export function SidebarNavigation() {
